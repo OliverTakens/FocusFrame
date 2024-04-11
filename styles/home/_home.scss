@@ -1,0 +1,10 @@
+@use "../abstracts/abstracts" as *;
+
+.userInfo{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.userInfoText{
+    color: $text-color;
+}

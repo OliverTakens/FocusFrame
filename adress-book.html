@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adress Book</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Implement Icons as Font -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="mainContentFlexbox">
+        <!-- Left Sidebar/Navigation and Mobile Navigation -->
+        <div class="navigationSidebar">
+            <h2 class="navigationHeader">FocusFrame</h2>
+            <div class="navigationLinks">
+            </div>
+            <a href="https://oliver-takens.de/imprint.html" class="legalLink"><i class='bx bx-info-square'></i> Imprint</a>
+        </div>
+        <div class="rightSide">
+            <!-- Searchbar on the Top -->
+            <div class="searchBar">
+                <div class="search">
+                    <span class="versionControl">v1</span>
+                    <input type="text" name="search" id="searchInput" placeholder="Search any Project...">
+                </div>
+                <div class="navigationToggleBox">
+                    <i class='bx bx-menu menuToggleIcon' id="menuBurger"></i>
+                    <i class='bx bx-x menuToggleIcon d-none' id="menuClose"></i>
+                </div>
+            </div>
+
+            <!-- Making a Container for the Scripts (saved in ../main.scss) -->
+            <div class="javascriptContainer">
+                <h1 class="userInfo">AdressBook</h1>
+                <!-- <p class="userInfoText"></p> -->
+                <div class="javascriptApplication adressBook">
+                    <!-- Creating a List of Contacts on the left side of the Application -->
+                    <div class="contacts">
+                        <div class="firstLetterBox"></div>
+                        <div class="contactBox">
+                            <div class="contactInitlians">AH</div>
+                            <div class="contactBoxInfo">
+                                <div class="contactBoxName">Alan Harper</div>
+                                <div class="contactBoxMail">alan-harper@icloud.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Create a Info Box that you can display all infos to a Contact -->
+                    <div class="contactInformation">
+                        <i class='bx bx-x closeContactIcon' ></i>
+                        <h2 class="contactHeading d-none">Contact</h2>
+                        <div class="nameFlex d-none">
+                            <div id="contactInitials">AH</div>
+                            <div id="contactName">Alan Harper</div>
+                        </div>
+                        <div class="contactInfo d-none">
+                            <span>Contact Information</span>
+                            <span id="editContact"><i class='bx bxs-edit-alt editIcon'></i> Edit Contact</span>
+                        </div>
+                        <div class="contactEmail d-none">
+                            <span>E-Mail:</span>
+                            <a id="contactMail" href="mailto:HIERMAIL">alan-harper@icloud.com</a>
+                        </div>
+                        <div class="contactPhone d-none">
+                            <span>Phone:</span>
+                            <a id="contactNumber" href="tel:+49HIERTELEFON">+49 176 30765044</a>
+                        </div>
+                        <span id="idBox" class="d-none"></span>
+                    </div>
+
+                    <a href="" class="addContactButton">Add Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add Contact Popup -->
+    <div class="overlay d-none"></div>
+    <div class="addContactPopup">
+        <i class='bx bx-x contactPopupClose' ></i>
+        <h3>Add Contact</h3>
+        <form action="">
+            <label for="newContactName">Name:</label>
+            <input type="text" name="name" id="newContactName" placeholder="Full Name..." required>
+            <label for="newContactPhone">Phone:</label>
+            <input type="tel" name="phone" id="newContactPhone" placeholder="Phonenumber..." required>
+            <label for="newContactMail">Mail:</label>
+            <input type="email" name="mail" id="newContactMail" placeholder="E-mail..." required>
+            <button id="createContactButton">Create Contact</button>
+        </form>
+    </div>
+
+    <script src="./scripts/adress-book.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

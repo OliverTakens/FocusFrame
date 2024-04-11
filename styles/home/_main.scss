@@ -1,0 +1,68 @@
+@use "../abstracts/abstracts" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    position: relative;
+}
+
+.mainContentFlexbox{
+    display: flex;
+}
+
+.rightSide{
+    width: 100%;
+    height: 100vh;
+}
+
+.javascriptContainer{
+    padding: 0rem 2rem;
+    width: 100%;
+}
+
+.userInfo{
+    padding-top: 1.5rem;
+}
+
+.userInfoText{
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.javascriptApplication{
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: $breakpoint-xs) {
+        padding-bottom: 1rem;
+    }
+}
+
+.error{
+    border: 1px solid red;
+    animation: errorAnimation .3s ease-in-out infinite;
+}
+
+@keyframes errorAnimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-1deg);
+    }
+    50%{
+        transform: rotate(1deg);
+    }
+    75%{
+        transform: rotate(-1deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

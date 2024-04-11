@@ -1,0 +1,31 @@
+$border-color: #e5e7eb;
+$text-color: #6b7280;
+
+.active{
+    background-color: #f3f3f5;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.transformBack{
+    transform: translateX(0%) !important;
+}
+
+
+/** 1200px oder schmaler */
+$breakpoint-lg: 75em;
+/** 992px oder schmaler */
+$breakpoint-md: 62em;
+/** 768px oder schmaler */
+$breakpoint-sm: 48em;
+/** 576px oder schmaler */
+$breakpoint-xs: 36em;
+
+
+/** Breakpoints */
+@media (max-width: $breakpoint-lg) {}
+@media (max-width: $breakpoint-md) {}
+@media (max-width: $breakpoint-sm) {}
+@media (max-width: $breakpoint-xs) {}

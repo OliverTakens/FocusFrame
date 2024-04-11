@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFrame</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Implement Icons as Font -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="mainContentFlexbox">
+        <!-- Left Sidebar/Navigation and Mobile Navigation -->
+        <div class="navigationSidebar">
+            <h2 class="navigationHeader">FocusFrame</h2>
+            <div class="navigationLinks">
+            </div>
+            <a href="https://oliver-takens.de/imprint.html" class="legalLink"><i class='bx bx-info-square'></i> Imprint</a>
+        </div>
+        <div class="rightSide">
+            <!-- Searchbar on the Top -->
+            <div class="searchBar">
+                <div class="search">
+                    <span class="versionControl">v1</span>
+                    <input type="text" name="search" id="searchInput" placeholder="Search any Project...">
+                </div>
+                <div class="navigationToggleBox">
+                    <i class='bx bx-menu menuToggleIcon' id="menuBurger"></i>
+                    <i class='bx bx-x menuToggleIcon d-none' id="menuClose"></i>
+                </div>
+            </div>
+
+            <!-- Making a Container for the Scripts (saved in ../main.scss) -->
+            <div class="javascriptContainer">
+                <h1 class="userInfo">Hey <span id="userName"></span>, start your day efficiently.</h1>
+                <p class="userInfoText">FocusFrame is an intuitive platform designed to make your task management more efficient and organized. In a world where time is a precious commodity, FocusFrame provides a centralized solution to manage projects and daily to-dos. With the ability to assign tasks, set deadlines and define priorities, it provides the flexibility and control you need to optimize your day-to-day work.</p>
+                <div class="javascriptApplication">
+                    <div class="userInfoFlex">
+                        <a href="./task-list.html" class="userInfoBox">
+                            <span class="number" id="todoLength">3</span>
+                            <span>Tasks</span>
+                        </a>
+                        <a href="./flow-board.html" class="userInfoBox">
+                            <span class="number" id="startedTasks">1</span>
+                            <span>Started Tasks</span>
+                        </a>
+                        <a href="./flow-board.html" class="userInfoBox">
+                            <span class="number" id="finishedTasks">0</span>
+                            <span>Tasks done</span>
+                        </a>
+                        <a href="./adress-book.html" class="userInfoBox">
+                            <span class="number" id="contactsLength">20</span>
+                            <span>Contacts</span>
+                        </a>
+                    </div>
+                    <h2 class="urgentTaskHeading">Urgent Task:</h2>
+                    <div class="urgentTaskBox">
+                        <h2 class="urgentTaskHeading" id="urgentTaskBoxHeading">Feedback for Olli´s Application</h2>
+                        <div class="dateBox">
+                            <span>Until:</span> <span id="urgentTaskDate">Today</span>
+                        </div>
+                        <p class="urgentTaskDescription">Write Olli a message in which I give him information about the quality and progress of his work. As he has put a lot of time and effort into developing the application, he is looking for constructive feedback to further refine his contributions and improve the overall quality of the project. Understanding areas for improvement is central to Olli's professional growth and development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form in the beginning -->
+    <div class="login">
+        <div class="loginForm">
+            <h3 class="loginHeading">Login</h3>
+            <p class="loginInfo">Enter your Email below to login to your Account.</p>
+            <form>
+                <label for="email">Email</label>
+                <input value="Guest@oliver-takens.de" type="email" name="email" id="emailInput" placeholder="Email*">
+                <label for="password">Password</label>
+                <input value="Random123" type="password" name="password" id="passwordInput" placeholder="Password*">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="nameInput" placeholder="Vorname*">
+                <button id="submitLogin">Sign in</button>
+                <button id="guestLogin">Guest Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

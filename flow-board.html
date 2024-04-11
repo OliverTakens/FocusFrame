@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Board</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Implement Icons as Font -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="mainContentFlexbox">
+        <!-- Left Sidebar/Navigation and Mobile Navigation -->
+        <div class="navigationSidebar">
+            <h2 class="navigationHeader">FocusFrame</h2>
+            <div class="navigationLinks">
+            </div>
+            <a href="https://oliver-takens.de/imprint.html" class="legalLink"><i class='bx bx-info-square'></i> Imprint</a>
+        </div>
+        <div class="rightSide">
+            <!-- Searchbar on the Top -->
+            <div class="searchBar">
+                <div class="search">
+                    <span class="versionControl">v1</span>
+                    <input type="text" name="search" id="searchInput" placeholder="Search any Project...">
+                </div>
+                <div class="navigationToggleBox">
+                    <i class='bx bx-menu menuToggleIcon' id="menuBurger"></i>
+                    <i class='bx bx-x menuToggleIcon d-none' id="menuClose"></i>
+                </div>
+            </div>
+
+            <!-- Making a Container for the Scripts (saved in ../main.scss) -->
+            <div class="javascriptContainer">
+                <h1 class="userInfo">Flow Board</h1>
+                <p class="userInfoText"></p>
+                <div class="javascriptApplication">
+                    <a href="./task-list.html" class="createTodo kanbanButton">Add Task</a>
+                    <div class="kanbanBoardBox">
+                        <div class="lanes">
+                            <div class="swimLaneBox">
+                                <h3 class="heading">Todo</h3>
+                                <div class="swimLane" id="todoLane">
+                                </div>
+                            </div>
+                            <div class="swimLaneBox">
+                                <h3 class="heading">Doing</h3>
+                                <div class="swimLane" id="doingLane">
+                            </div>
+                            </div>
+                            <div class="swimLaneBox">
+                                <h3 class="heading">Done</h3>
+                                <div class="swimLane" id="doneLane">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup if someone click on a Task -->
+    <div class="overlay d-none"></div>
+    <div class="todoInfos">
+        <i class='bx bx-x todoCloseButton todoInfosClose'></i>
+        <h2 class="taskHeading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, commodi.</h2>
+        <div class="urgencyInfo">
+            <div><span>Due Date:</span> <span id="taskDate">19.12.2024</span></div>
+            <div><span>Priority:</span> <span id="taskUrgency">Urgent</span></div>
+            <span class="d-none" id="todoInfosID"></span>
+        </div>
+        <p class="taskDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eaque adipisci dignissimos iste accusantium vitae libero, repudiandae, ad illum, laborum minus odit quasi harum quos. Deleniti magni ex cumque at.</p>
+        <i class='bx bx-trash' id="todoInfoTrash"></i>
+        <div class="teamBox d-none"><span id="teamMemberInitials">LM</span> <span id="teamMemberName">Lionel Messi</span></div>
+    </div>
+
+
+
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/kanban-board.js"></script>
+</body>
+</html>

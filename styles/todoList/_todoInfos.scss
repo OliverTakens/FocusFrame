@@ -1,0 +1,169 @@
+@use "../abstracts/abstracts" as *;
+
+.todoInfos{
+    opacity: 0;
+    background-color: white;
+    width: 40rem;
+    height: fit-content;
+    z-index: 4;
+    overflow-y: auto;
+    position: absolute;
+    top: 50%;
+    left: -150%;
+    transform: translate(-50%, -50%);
+    padding: 1.5rem 1rem 5.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in-out;
+
+    @media (max-width: $breakpoint-sm) {
+        opacity: 0;
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+}
+
+.display{
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    left: 50%;
+
+    @media (max-width: $breakpoint-sm) {
+        opacity: 1;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+}
+
+.taskHeading{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    max-height: 13rem;
+    overflow-y: scroll;
+}
+
+.taskDescription{
+    max-height: 15rem;
+    overflow-y: scroll;
+    letter-spacing: 0.05rem;
+    line-height: 1.31rem;
+    color: $text-color;
+}
+
+.urgencyInfo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    width: 20rem;
+}
+
+.urgencyInfo div{
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskDate{
+    font-weight: 500;
+}
+
+#taskUrgency{
+    background-color: orange;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+#startTask{
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.804);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1.3rem;
+        padding: 0.7rem 1.2rem;
+        margin-bottom: 0.1rem;
+    }
+}
+
+#todoInfoTrash,
+#todoInfoEdit{
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    position: absolute;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: $border-color;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 3rem;
+    }
+}
+
+#todoInfoTrash{
+    right: 1rem;
+    bottom: 1rem;
+}
+
+#todoInfoEdit{
+    right: 3.5rem;
+    bottom: 1rem;
+
+    @media (max-width: $breakpoint-sm) {
+        right: 5rem;
+    }
+}
+
+.teamBox{
+    max-width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1rem;
+
+    @media (max-width: $breakpoint-sm) {
+        position: unset;
+        margin-top: 2rem;
+    }
+}
+
+#teamMemberInitials{
+    background-color: lightblue;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+#teamMemberName{
+    font-size: 1.2rem;
+}

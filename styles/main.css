@@ -1,0 +1,1190 @@
+.active {
+  background-color: #f3f3f5;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.transformBack {
+  transform: translateX(0%) !important;
+}
+
+/** 1200px oder schmaler */
+/** 992px oder schmaler */
+/** 768px oder schmaler */
+/** 576px oder schmaler */
+/** Breakpoints */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.mainContentFlexbox {
+  display: flex;
+}
+
+.rightSide {
+  width: 100%;
+  height: 100vh;
+}
+
+.javascriptContainer {
+  padding: 0rem 2rem;
+  width: 100%;
+}
+
+.userInfo {
+  padding-top: 1.5rem;
+}
+
+.userInfoText {
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.javascriptApplication {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 36em) {
+  .javascriptApplication {
+    padding-bottom: 1rem;
+  }
+}
+
+.error {
+  border: 1px solid red;
+  animation: errorAnimation 0.3s ease-in-out infinite;
+}
+
+@keyframes errorAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.navigationSidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #fbfbfc;
+  border-right: 1px solid #e5e7eb;
+  padding: 1.5rem 1rem;
+  opacity: 1;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 950px) {
+  .navigationSidebar {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+  }
+}
+
+@media (max-width: 950px) {
+  .navigationToggle {
+    width: 80%;
+    opacity: 1;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.navigationHeader {
+  margin-bottom: 1rem;
+}
+@media (max-width: 75em) {
+  .navigationHeader {
+    font-size: 1rem;
+  }
+}
+
+.navigationLinks {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 62em) {
+  .navigationLinks {
+    padding: 0;
+  }
+}
+
+.navigationLink {
+  text-decoration: none;
+  color: #6b7280;
+  padding: 0.7rem 0.7rem;
+  margin: 0.1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+.navigationLink:hover {
+  background-color: #f3f3f5;
+}
+
+.legalLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #6b7280;
+  transition: all 0.15s ease-in-out;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+.legalLink:hover {
+  color: black;
+}
+
+.searchBar {
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  height: 4rem;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.versionControl {
+  margin: 0.3rem 1rem;
+  font-weight: 600;
+}
+
+#searchInput {
+  outline: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.3rem;
+  width: 20rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  background-image: url(../images/searchIcon.png);
+  background-repeat: no-repeat;
+  background-position: 5px 7px;
+}
+@media (max-width: 36em) {
+  #searchInput {
+    width: 15rem;
+  }
+}
+
+.navigationToggleBox {
+  display: none;
+}
+@media (max-width: 950px) {
+  .navigationToggleBox {
+    display: block;
+  }
+}
+
+.menuToggleIcon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.userInfo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.userInfoText {
+  color: #6b7280;
+}
+
+.login {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.loginForm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 28rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 36em) {
+  .loginForm {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.loginHeading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.loginInfo {
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: 600;
+  margin: 1rem 0 0.7rem 0;
+}
+
+form input {
+  outline: none;
+  border-radius: 0.4rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem 0.5rem;
+  font-size: 1.1rem;
+}
+
+#nameInput {
+  margin-bottom: 2rem;
+}
+
+#submitLogin,
+#guestLogin {
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.6rem 0;
+  outline: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#submitLogin {
+  background-color: black;
+  color: white;
+  border: 0;
+}
+#submitLogin:hover {
+  background-color: rgba(0, 0, 0, 0.754);
+}
+
+#guestLogin {
+  background-color: white;
+  border: 1.5px solid #e5e7eb;
+}
+#guestLogin:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+.userInfoFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media (max-width: 36em) {
+  .userInfoFlex {
+    justify-content: space-around;
+  }
+}
+
+.userInfoBox {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.userInfoBox:hover {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 75em) {
+  .userInfoBox {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (max-width: 36em) {
+  .userInfoBox {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.urgentTaskHeading {
+  margin-bottom: 1.5rem;
+}
+
+.urgentTaskBox {
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  margin: 0 1rem;
+  border-radius: 1rem;
+}
+@media (max-width: 36em) {
+  .urgentTaskBox {
+    margin: 0;
+  }
+}
+
+.dateBox {
+  margin-bottom: 1rem;
+}
+
+.urgentTaskBox span {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.urgentTaskDescription {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.todoListContainer {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.addTodoContainer {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100vh;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+@media (max-width: 62em) {
+  .addTodoContainer {
+    width: 35%;
+  }
+}
+@media (max-width: 48em) {
+  .addTodoContainer {
+    width: 50%;
+  }
+}
+@media (max-width: 36em) {
+  .addTodoContainer {
+    width: 100%;
+  }
+}
+
+.todoCloseButton {
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  padding: 0.3rem;
+  top: 1rem;
+  right: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.todoCloseButton:hover {
+  color: #6b7280;
+}
+
+.todoForm {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+#urgency,
+#team {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  outline: 0;
+}
+
+#date {
+  width: 100%;
+}
+
+.button {
+  margin: 2rem auto 0 auto;
+  background-color: black;
+  color: white;
+  display: block;
+  outline: 0;
+  border: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.todoHeading {
+  margin: 0.5rem 0 2rem 0;
+}
+
+.createTodo {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.task {
+  position: relative;
+  max-width: 100%;
+  max-height: 5rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #6b7280;
+}
+@media (max-width: 36em) {
+  .task {
+    width: 100%;
+    height: auto;
+  }
+}
+.task:hover {
+  background-color: #f3f3f5;
+}
+
+.task span {
+  overflow-x: auto;
+  height: 2.5rem;
+  min-width: 80%;
+  max-width: 90%;
+}
+@media (max-width: 36em) {
+  .task span {
+    min-width: 60%;
+  }
+}
+
+.taskEdit {
+  display: flex;
+  align-items: center;
+}
+
+.taskEdit a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  display: block;
+  margin-right: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.taskEdit a:hover {
+  background-color: rgb(70, 70, 70);
+}
+
+.deleteTask {
+  font-size: 2rem;
+  color: black;
+}
+
+.todoInfos {
+  opacity: 0;
+  background-color: white;
+  width: 40rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 4;
+  overflow-y: auto;
+  position: absolute;
+  top: 50%;
+  left: -150%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem 1rem 5.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 48em) {
+  .todoInfos {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.display {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  left: 50%;
+}
+@media (max-width: 48em) {
+  .display {
+    opacity: 1;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.taskHeading {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  max-height: 13rem;
+  overflow-y: scroll;
+}
+
+.taskDescription {
+  max-height: 15rem;
+  overflow-y: scroll;
+  letter-spacing: 0.05rem;
+  line-height: 1.31rem;
+  color: #6b7280;
+}
+
+.urgencyInfo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  width: 20rem;
+}
+
+.urgencyInfo div {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskDate {
+  font-weight: 500;
+}
+
+#taskUrgency {
+  background-color: orange;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+#startTask {
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+#startTask:hover {
+  background-color: rgba(0, 0, 0, 0.804);
+}
+@media (max-width: 48em) {
+  #startTask {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 0.1rem;
+  }
+}
+
+#todoInfoTrash,
+#todoInfoEdit {
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  position: absolute;
+  transition: all 0.2s;
+}
+#todoInfoTrash:hover,
+#todoInfoEdit:hover {
+  background-color: #e5e7eb;
+}
+@media (max-width: 48em) {
+  #todoInfoTrash,
+  #todoInfoEdit {
+    font-size: 3rem;
+  }
+}
+
+#todoInfoTrash {
+  right: 1rem;
+  bottom: 1rem;
+}
+
+#todoInfoEdit {
+  right: 3.5rem;
+  bottom: 1rem;
+}
+@media (max-width: 48em) {
+  #todoInfoEdit {
+    right: 5rem;
+  }
+}
+
+.teamBox {
+  max-width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1rem;
+}
+@media (max-width: 48em) {
+  .teamBox {
+    position: unset;
+    margin-top: 2rem;
+  }
+}
+
+#teamMemberInitials {
+  background-color: lightblue;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+#teamMemberName {
+  font-size: 1.2rem;
+}
+
+.adressBook {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacts {
+  width: 30%;
+  height: 85vh;
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+}
+@media (max-width: 75em) {
+  .contacts {
+    width: 50%;
+    height: 80vh;
+  }
+}
+@media (max-width: 48em) {
+  .contacts {
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+}
+
+.contactInformation {
+  background-color: #f5f5f5;
+  width: 100%;
+  max-height: 100%;
+  padding: 1rem 0 1rem 3rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  position: relative;
+}
+@media (max-width: 48em) {
+  .contactInformation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 5;
+    display: none;
+  }
+}
+
+.addContactButton {
+  position: absolute;
+  z-index: 1;
+  top: 11rem;
+  right: 4rem;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  transition: all 0.2s;
+}
+.addContactButton:hover {
+  color: white;
+  background-color: black;
+}
+@media (max-width: 48em) {
+  .addContactButton {
+    color: white;
+    background-color: black;
+    top: 5.5rem;
+    right: 2rem;
+  }
+}
+
+.contactHeading {
+  font-size: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin-bottom: 4rem;
+}
+.contactHeading::after {
+  content: "";
+  background-color: #e5e7eb;
+  width: 2px;
+  height: 2.5rem;
+  display: block;
+  position: absolute;
+  right: -1rem;
+  top: 0;
+}
+
+.nameFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+#contactInitials {
+  background-color: #3a02bc;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.contactInitlians {
+  background-color: #3a02bc;
+  letter-spacing: 0.1rem;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+}
+@media (max-width: 1050px) {
+  .contactInitlians {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+}
+
+#contactName {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contactInfo :nth-child(1) {
+  font-weight: 600;
+}
+
+.contactInfo :nth-child(2) {
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.contactInfo :nth-child(2):hover {
+  color: rgba(0, 0, 0, 0.5529411765);
+}
+
+.editIcon {
+  font-size: 1.7rem;
+}
+
+.contactEmail, .contactPhone {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contactEmail span, .contactPhone span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contactEmail a, .contactPhone a {
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  transition: all 0.1s;
+  border-bottom: 1px solid transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contactEmail a:hover, .contactPhone a:hover {
+  color: rgba(0, 0, 255, 0.634);
+  border-bottom: 1px solid rgba(0, 0, 255, 0.634);
+}
+
+.closeContactIcon {
+  position: absolute;
+  font-size: 3rem;
+  right: 2rem;
+  cursor: pointer;
+  display: none !important;
+}
+@media (max-width: 48em) {
+  .closeContactIcon {
+    display: block !important;
+    top: 0.7rem;
+  }
+}
+
+.firstLetterBox {
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contactBox {
+  height: 3.5rem;
+  margin: 1rem 0.5rem 1rem 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.contactBox:hover {
+  background-color: rgba(6, 6, 48, 0.8);
+  color: white;
+}
+@media (max-width: 1000px) {
+  .contactBox {
+    gap: 0.5rem;
+  }
+}
+
+.activeBox {
+  background-color: rgba(6, 6, 48, 0.8);
+  color: white;
+}
+
+.contactBoxInfo {
+  height: 100%;
+  width: 11rem;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactBoxName {
+  font-weight: 600;
+  width: 11rem;
+  overflow-x: auto;
+}
+
+.contactBoxMail {
+  font-size: 0.9rem;
+  color: rgb(111, 111, 255);
+  width: 11rem;
+  overflow-x: auto;
+}
+
+.addContactPopup {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: -150%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  flex-direction: column;
+}
+@media (max-width: 36em) {
+  .addContactPopup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.show {
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  left: 50%;
+}
+@media (max-width: 36em) {
+  .show {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.contactPopupClose {
+  position: absolute;
+  font-size: 2rem;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+
+.addContactPopup h3 {
+  margin-bottom: 1.5rem;
+}
+
+.addContactPopup label {
+  margin-bottom: 0.5rem;
+}
+
+.addContactPopup input {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  outline: 0;
+  border: 1px solid #e5e7eb;
+}
+
+.addContactPopup button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin: 1rem auto 0 auto;
+  padding: 0.5rem;
+  outline: 0;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.addContactPopup button:hover {
+  background-color: black;
+  color: white;
+}
+
+.kanbanBoardBox {
+  width: 100%;
+  height: 83vh;
+  overflow-y: scroll;
+}
+
+.kanbanButton {
+  top: 5rem;
+  right: 2rem;
+}
+
+.lanes {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0rem;
+  overflow: scroll;
+  height: 100%;
+}
+@media (max-width: 48em) {
+  .lanes {
+    flex-direction: column;
+    padding: 0rem;
+  }
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.swimLaneBox {
+  width: 32%;
+  min-height: 95%;
+}
+@media (max-width: 48em) {
+  .swimLaneBox {
+    width: 100%;
+  }
+}
+
+.swimLane {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 0.8rem;
+  background: #f4f4f4;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  min-height: 95%;
+}
+@media (max-width: 48em) {
+  .swimLane {
+    width: 100%;
+  }
+}
+
+.kanbanTask {
+  background: white;
+  color: black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 0.8rem 5rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.isDragging {
+  scale: 1.03;
+  opacity: 0.9;
+}
+
+.kanbanTaskHeading {
+  max-height: 1.5rem;
+  overflow-y: scroll;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.kanbanTaskDescription {
+  color: #6b7280;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  max-height: 5rem;
+  overflow: scroll;
+  margin-bottom: 0.8rem;
+}
+
+.kanbanInitials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0.8rem;
+}
+
+.kanbanUrgency {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.2rem;
+  font-size: 2rem;
+}/*# sourceMappingURL=main.css.map */

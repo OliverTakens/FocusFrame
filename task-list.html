@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <!-- Implement Icons as Font -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="mainContentFlexbox">
+        <!-- Left Sidebar/Navigation and Mobile Navigation -->
+        <div class="navigationSidebar">
+            <h2 class="navigationHeader">FocusFrame</h2>
+            <div class="navigationLinks">
+            </div>
+            <a href="https://oliver-takens.de/imprint.html" class="legalLink"><i class='bx bx-info-square'></i> Imprint</a>
+        </div>
+        <div class="rightSide">
+            <!-- Searchbar on the Top -->
+            <div class="searchBar">
+                <div class="search">
+                    <span class="versionControl">v1</span>
+                    <input type="text" name="search" id="searchInput" placeholder="Search any Project...">
+                </div>
+                <div class="navigationToggleBox">
+                    <i class='bx bx-menu menuToggleIcon' id="menuBurger"></i>
+                    <i class='bx bx-x menuToggleIcon d-none' id="menuClose"></i>
+                </div>
+            </div>
+
+            <!-- Making a Container for the Scripts (saved in ../main.scss) -->
+            <div class="javascriptContainer">
+                <h1 class="userInfo">Your planning starting point: simple and effective</h1>
+                <p class="userInfoText"></p>
+                <div class="javascriptApplication">
+                    <div class="todoListContainer">
+                        <h2 class="todoHeading">Your Tasks</h2>
+                        <a href="" class="createTodo" id="createTodo">Add Task</a>
+                        <div class="tasks">
+                            <p>Create your First Task</p>                            
+                        </div>
+                    </div>
+
+                    <!-- AddTodo Sidebar on the right side -->
+                    <div class="overlay d-none"></div>
+                    <div class="addTodoContainer">
+                        <h2 class="todoHeading" id="addTodoContainerHeading">Add Task:</h2>
+                        <i class='bx bx-x todoCloseButton'></i>
+                        <form class="todoForm">
+                            <label for="task">Task:</label>
+                            <input name="task" type="text" id="task" required>
+                            <label for="description">Description:</label>
+                            <input type="text" name="description" id="description">
+                            <label for="urgency">Urgency:</label>
+                            <select name="urgency" id="urgency" required>
+                                <option value="">Please select</option>
+                                <option value="Low">Low</option>
+                                <option value="Middle">Middle</option>
+                                <option value="High">High</option>
+                            </select>
+                            <label for="team">Co-Worker:</label>
+                            <select name="team" id="team">
+                                <option value="">Select as required</option>
+                            </select>
+                            <label for="date">To be completed by:</label>
+                            <input type="datetime-local" name="date" id="date" required>
+                            <span id="todoId" class="d-none"></span>
+                            <button class="button" id="addTaskButton">Add Task</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup if someone click on a Todo -->
+    <div class="todoInfos">
+        <i class='bx bx-x todoCloseButton todoInfosClose'></i>
+        <h2 class="taskHeading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, commodi.</h2>
+        <div class="urgencyInfo">
+            <div><span>Due Date:</span> <span id="taskDate">19.12.2024</span></div>
+            <div><span>Priority:</span> <span id="taskUrgency">Urgent</span></div>
+            <span class="d-none" id="todoInfosID"></span>
+        </div>
+        <p class="taskDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eaque adipisci dignissimos iste accusantium vitae libero, repudiandae, ad illum, laborum minus odit quasi harum quos. Deleniti magni ex cumque at.</p>
+        <a href="./flow-board.html" id="startTask">Start Task</a>
+        <i class='bx bx-trash' id="todoInfoTrash"></i>
+        <i class='bx bx-edit-alt' id="todoInfoEdit"></i>
+    </div>
+
+    <script src="./scripts/todo.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
